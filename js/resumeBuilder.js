@@ -178,7 +178,7 @@ projects.display = function() {
 
 			$(".project-entry:last").append(HTMLprojectTitle.replace("%data%", projects.projects[project].title));
 			$(".project-entry:last").append(HTMLprojectDates.replace("%data%", projects.projects[project].dates));
-			$(".project-entry:last").append(HTMLprojectDescription.replace("%data%", projectsprojects[project].description));
+			$(".project-entry:last").append(HTMLprojectDescription.replace("%data%", projects.projects[project].description));
 
 			if (projects.projects[project].images.length > 0) {
 				for (var img in projects.projects[project].images) {
