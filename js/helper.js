@@ -1,17 +1,3 @@
-/*
-
-This file contains all of the code running in the background that makes resumeBuilder.js possible. We call these helper functions because they support your code in this course.
-
-Don't worry, you'll learn what's going on in this file throughout the course. You won't need to make any changes to it until you start experimenting with inserting a Google Map in Problem Set 3.
-
-Cameron Pittman
-*/
-
-
-/*
-These are HTML strings. As part of the course, you'll be using JavaScript functions
-replace the %data% placeholder text you see in them.
-*/
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<span id="role">%data%</span><hr/>';
 
@@ -74,7 +60,7 @@ $(document).ready(function() {
 /*
 The next few lines about clicks are for the Collecting Click Locations quiz in Lesson 2.
 */
-clickLocations = [];
+var clickLocations = [];
 
 function logClicks(x,y) {
   clickLocations.push(
@@ -257,7 +243,6 @@ $(document).ready(function() {
 	$("#intButton").click(function() {
 		// Turn surname to upper case
 		var name = $("#name").text();
-		console.log(name);
 		var split_name = name.split(/ /g);
 		var new_name = split_name[0].slice(0, 1).toUpperCase() + split_name[0].slice(1).toLowerCase() + " " + split_name[1].slice(0).toUpperCase();
 		$("#name").text(new_name);
